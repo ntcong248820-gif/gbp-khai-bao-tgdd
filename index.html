@@ -147,8 +147,8 @@ section>h2{font-size:18px;font-weight:500;margin:0 0 12px}
 <div class="sticky">
   <div class="wrap">
     <nav class="tabs" id="tabs">
-      <a href="#gioi-thieu">Giới thiệu</a><a href="#lien-he">Liên hệ</a><a href="#vi-tri">Vị trí</a>
-      <a href="#gio">Giờ hoạt động</a><a href="#khac">Khác</a><a href="#dich-vu">Dịch vụ</a><a href="#san-pham">Sản phẩm</a>
+      <a href="#gioi-thieu">Giới thiệu</a><a href="#lien-he">Liên hệ</a><a href="#vi-tri">Vị trí và khu vực</a>
+      <a href="#gio">Giờ làm việc</a><a href="#khac">Khác</a><a href="#dich-vu">Danh sách dịch vụ</a><a href="#san-pham">Sản phẩm</a>
     </nav>
     <div class="colhead"><div><span class="dot"></span>Hiện tại trên Google Maps</div><div class="new"><span class="dot"></span>Sau khi khai báo mới</div></div>
   </div>
@@ -193,16 +193,16 @@ const NOTES = {
   open:{t:'Ngày khai trương',p:'323 siêu thị chưa khai.',w:'Không bắt buộc: mục này ít ảnh hưởng tới tìm kiếm, còn ngày thật của từng siêu thị khó lấy. Siêu thị đã có thì giữ, chưa có thì để trống.'},
   phone:{t:'Số điện thoại',p:'Đây là lỗi sếp thấy trên Maps. 90 siêu thị sai SĐT, toàn do Google tự đổi: 54 bị xoá số, 13 bị đổi sang 1800 1062 (số khiếu nại), số còn lại là số phụ hoặc số lẻ. Khách bấm gọi mà vào đường khiếu nại, hoặc không có số để gọi, là mất đơn.',w:'Siêu thị không có số riêng, nên mọi siêu thị dùng tổng đài mua hàng 1900 232460, đúng số trên website. Số phụ 1900 232464 (hỗ trợ kỹ thuật, bảo hành) cho khách cần sửa máy.',x:'Số khiếu nại 1800 1062 vẫn giữ trên website như cũ, chỉ không đặt làm số của siêu thị trên Google Maps.'},
   web:{t:'Trang web',p:'224 siêu thị trỏ về trang chủ hoặc trang chung, khách bấm vào phải tự tìm lại siêu thị. 3 siêu thị bị Google tự đặt nhầm sang trang của siêu thị khác.',w:'Trang riêng của siêu thị có địa chỉ, giờ, SĐT khớp với Maps, giúp Google và AI xác nhận đây đúng là cửa hàng đó. Link lấy trực tiếp từ website.',x:'Không gắn mã theo dõi (UTM) vào link.'},
-  social:{t:'Hồ sơ mạng xã hội',p:'Link YouTube @tgddreview đang khai ở 443 siêu thị đã chết (mở ra báo lỗi 404). Instagram, TikTok gần như chưa khai.',w:'Nối đủ kênh chính thức giúp Google nhận diện đây là thương hiệu Thế Giới Di Động. Cả 4 link lấy đúng từ footer website thegioididong.com.'},
-  addr:{t:'Địa chỉ',p:'269 siêu thị bị Google tự sửa địa chỉ, phần lớn chỉ rút gọn cách viết; khoảng 36 siêu thị nghi bị mất số nhà hoặc tên đường.',w:'Không áp mẫu chung. Duyệt từng ca, vì sửa địa chỉ có thể làm Google bắt xác minh lại cửa hàng.'},
-  area:{t:'Khu vực kinh doanh dịch vụ',p:'64 siêu thị khai lẫn lộn: khi khai tỉnh, khi khai huyện, có siêu thị khai cả "Việt Nam".',w:'Bỏ trống: siêu thị có cửa hàng thật, khách đến tận nơi nên không cần mục này. Bỏ trống không ảnh hưởng việc hiển thị địa chỉ.'},
-  hours:{t:'Giờ mở cửa',p:'103 siêu thị bị Google đánh dấu đã sửa giờ mà chưa ai duyệt.',w:'Lấy đúng giờ ghi trên trang siêu thị ở website. Giờ sai thì Google và AI báo "đang đóng cửa" khi siêu thị vẫn mở.'},
-  special:{t:'Giờ đặc biệt (lễ, Tết)',p:'Chưa siêu thị nào khai.',w:'Không có giá trị cố định. Trước mỗi dịp lễ, Tết lấy lịch hoạt động rồi khai hàng loạt. Không khai thì Google có thể báo sai giờ, khách tới lúc siêu thị đóng cửa.'},
-  repair:{t:'Dịch vụ sửa chữa',p:'122 siêu thị đang khai "Không có dịch vụ sửa chữa", 327 siêu thị chưa khai.',w:'Khai "Có" vì siêu thị có dán kính, chuyển dữ liệu, nhận bảo hành. Mục này quyết định siêu thị có hiện khi khách hỏi "sửa điện thoại ở đâu" hay không.'},
+  social:{t:'Trang doanh nghiệp trên mạng xã hội',p:'Link YouTube @tgddreview đang khai ở 443 siêu thị đã chết (mở ra báo lỗi 404). Instagram, TikTok gần như chưa khai.',w:'Nối đủ kênh chính thức giúp Google nhận diện đây là thương hiệu Thế Giới Di Động. Cả 4 link lấy đúng từ footer website thegioididong.com.'},
+  addr:{t:'Địa điểm doanh nghiệp',p:'269 siêu thị bị Google tự sửa địa chỉ, phần lớn chỉ rút gọn cách viết; khoảng 36 siêu thị nghi bị mất số nhà hoặc tên đường.',w:'Không áp mẫu chung. Duyệt từng ca, vì sửa địa chỉ có thể làm Google bắt xác minh lại cửa hàng.'},
+  area:{t:'Khu vực kinh doanh',p:'64 siêu thị khai lẫn lộn: khi khai tỉnh, khi khai huyện, có siêu thị khai cả "Việt Nam".',w:'Bỏ trống: siêu thị có cửa hàng thật, khách đến tận nơi nên không cần mục này. Bỏ trống không ảnh hưởng việc hiển thị địa chỉ.'},
+  hours:{t:'Giờ',p:'103 siêu thị bị Google đánh dấu đã sửa giờ mà chưa ai duyệt. Giờ đang khai trên Maps chỉ khớp trang siêu thị ở khoảng một nửa số store.',w:'Đang lấy giờ ghi trên trang riêng của từng siêu thị ở website. Giờ sai thì Google và AI báo "đang đóng cửa" khi siêu thị vẫn mở.',x:'Website có 2 nguồn ghi khác nhau: trang Hệ thống siêu thị ghi chung 8:00–22:00, còn trang riêng từng siêu thị ghi giờ riêng (nhiều nhất 8–21 giờ, có store 8–20 giờ). Đang chờ chốt lấy nguồn nào.'},
+  special:{t:'Giờ đặc biệt',p:'Chưa siêu thị nào khai.',w:'Không có giá trị cố định. Trước mỗi dịp lễ, Tết lấy lịch hoạt động rồi khai hàng loạt. Không khai thì Google có thể báo sai giờ, khách tới lúc siêu thị đóng cửa.'},
+  repair:{t:'Dịch vụ › Dịch vụ sửa chữa',p:'122 siêu thị đang khai "Không có dịch vụ sửa chữa", 327 siêu thị chưa khai.',w:'Khai "Có" vì siêu thị có dán kính, chuyển dữ liệu, nhận bảo hành. Mục này quyết định siêu thị có hiện khi khách hỏi "sửa điện thoại ở đâu" hay không.',x:'Chỗ khai: Thông tin doanh nghiệp › tab Khác › mục "Dịch vụ". Mục này trống thì bấm biểu tượng bút chì mới hiện ô "Dịch vụ sửa chữa". Khác với danh sách Dịch vụ ở màn Chỉnh sửa dịch vụ.'},
   pay:{t:'Thanh toán',p:'Google đã tự gỡ Visa, JCB, Mastercard ở nhiều siêu thị; 4 siêu thị ghi "chỉ nhận tiền mặt".',w:'Google và AI dùng mục này để trả lời "có quẹt thẻ, có trả bằng điện thoại không".',x:'Chờ bộ phận thanh toán xác nhận loại thẻ nhận ở mọi siêu thị.'},
-  opt:{t:'Tuỳ chọn dịch vụ',p:'214 siêu thị thiếu "Mua sắm tại cửa hàng".',w:'Google dùng mục này để lọc khi khách hỏi "mua trực tiếp ở đâu", "đặt online rồi nhận tại cửa hàng".'},
+  opt:{t:'Các tùy chọn dịch vụ',p:'214 siêu thị thiếu "Mua sắm tại cửa hàng".',w:'Google dùng mục này để lọc khi khách hỏi "mua trực tiếp ở đâu", "đặt online rồi nhận tại cửa hàng".'},
   other:{t:'Thuộc tính khác',w:'Wi-Fi, lối đi xe lăn, tái chế… ít ảnh hưởng tới việc AI gợi ý cửa hàng, nên giữ nguyên.'},
-  svc:{t:'Dịch vụ',p:'0/454 siêu thị khai dịch vụ. Đây là chỗ quan trọng nhất cho câu hỏi hẹp như "dán kính ở đâu", "chuyển dữ liệu điện thoại", "mua trả góp". Không khai thì Google và AI không có căn cứ để gợi ý Thế Giới Di Động.',w:'7 dịch vụ đã chốt là việc mọi siêu thị đều làm (không có thay pin nên không khai). 4 dịch vụ đề xuất thêm lấy từ mục "Tiện ích tại siêu thị" trên website — 25/25 siêu thị kiểm thử đều ghi giống nhau — đang chờ duyệt.',x:'Mục này phải khai trên giao diện hoặc qua API, không làm bằng file tải lên hàng loạt được.'},
+  svc:{t:'Danh sách dịch vụ',p:'0/454 siêu thị khai dịch vụ. Đây là chỗ quan trọng nhất cho câu hỏi hẹp như "dán kính ở đâu", "chuyển dữ liệu điện thoại", "mua trả góp". Không khai thì Google và AI không có căn cứ để gợi ý Thế Giới Di Động.',w:'7 dịch vụ đã chốt là việc mọi siêu thị đều làm (không có thay pin nên không khai). 4 dịch vụ đề xuất thêm lấy từ mục "Tiện ích tại siêu thị" trên website — 25/25 siêu thị kiểm thử đều ghi giống nhau — đang chờ duyệt.',x:'Khai ở màn riêng "Chỉnh sửa dịch vụ" của hồ sơ, không nằm trong Thông tin doanh nghiệp. Phải làm trên giao diện hoặc qua API, file tải lên hàng loạt không ghi được mục này.'},
   prod:{t:'Sản phẩm',p:'Phần lớn siêu thị chỉ có vài mẫu iPhone 17/Air từ đợt đăng trước; chưa có phụ kiện, laptop, đồng hồ.',w:'Không khai thêm: khai đủ sản phẩm cho 454 siêu thị rất tốn công (không làm hàng loạt được) và phải cập nhật liên tục khi đổi mẫu. Danh mục, mô tả và dịch vụ đã nói siêu thị bán gì.',x:'Sản phẩm cũ đang có: chờ chốt để nguyên hay xoá.'},
 };
 
@@ -298,23 +298,23 @@ function fields(s){
     if (cur.some(u => /@tgddreview/i.test(u))) fl.push(['Link YouTube hỏng (404)','b-red']);
     if (!cur.some(u => /instagram/.test(u)) || !cur.some(u => /tiktok/.test(u))) fl.push(['Thiếu Instagram, TikTok','b-amber']);
     if (s.social.g==='google') fl.push(['Google tự sửa','b-amber']);
-    add({label:'Hồ sơ mạng xã hội',note:'social',cur:gbar(s.social,'mạng xã hội',link)||ln(cur.map(link)),flags:fl,neu:ln(STD.social.map(link)),status:'chot',
+    add({label:'Trang doanh nghiệp trên mạng xã hội',note:'social',cur:gbar(s.social,'mạng xã hội',link)||ln(cur.map(link)),flags:fl,neu:ln(STD.social.map(link)),status:'chot',
       change:sameList(cur,STD.social)?'giu':'sua'});
   }
 
-  sec(['vi-tri','Vị trí']);
+  sec(['vi-tri','Vị trí và khu vực']);
   {
     const fl = s.addr.g==='google' ? [['Google tự sửa, cần duyệt','b-amber']] : [];
-    add({label:'Địa chỉ',note:'addr',cur:gbar(s.addr,'địa chỉ')||ln(s.addr.cur.map(esc)),flags:fl,
+    add({label:'Địa điểm doanh nghiệp',note:'addr',cur:gbar(s.addr,'địa chỉ')||ln(s.addr.cur.map(esc)),flags:fl,
       neu:ln(s.addr.cur.map(esc))+(s.addr.g==='google'?'<span class="ln" style="color:var(--faint);font-size:12.5px;margin-top:6px">So với địa chỉ thật rồi mới nhận hoặc trả lại.</span>':''),status:'ca',change:'giu'});
   }
   {
     const fl = s.area.length ? [['Khai không theo quy tắc','b-amber']] : [];
-    add({label:'Khu vực kinh doanh dịch vụ',note:'area',cur:s.area.length?ln(s.area.map(esc)):'<span class="empty">Trống</span>',flags:fl,
+    add({label:'Khu vực kinh doanh',note:'area',cur:s.area.length?ln(s.area.map(esc)):'<span class="empty">Trống</span>',flags:fl,
       neu:'<span class="empty">Bỏ trống</span>',status:'chot',change:s.area.length?'xoa':'giu'});
   }
 
-  sec(['gio','Giờ hoạt động']);
+  sec(['gio','Giờ làm việc']);
   {
     const fl = [];
     const cur = s.hours.cur;
@@ -322,9 +322,9 @@ function fields(s){
     else if (s.newHours && cur.join()!==s.newHours) fl.push(['Lệch giờ trên website','b-amber']);
     if (s.hours.g==='google') fl.push(['Google tự sửa','b-amber']);
     const neu = s.newHours ? ln([esc(s.newHours)]) : '<span class="empty">Website không ghi giờ cho siêu thị này</span>';
-    add({label:'Giờ mở cửa',note:'hours',cur:ln(cur.map(esc)),flags:fl,neu,status:'chot',change:(cur.join()===s.newHours)?'giu':'sua'});
+    add({label:'Giờ',note:'hours',cur:ln(cur.map(esc)),flags:fl,neu,status:'cho',change:(cur.join()===s.newHours)?'giu':'sua'});
   }
-  add({label:'Giờ đặc biệt (lễ, Tết)',note:'special',cur:s.special.length?ln(s.special.map(esc)):'<span class="empty">Chưa khai</span>',flags:[],
+  add({label:'Giờ đặc biệt',note:'special',cur:s.special.length?ln(s.special.map(esc)):'<span class="empty">Chưa khai</span>',flags:[],
     neu:'<span class="ln">Khai trước mỗi dịp lễ, Tết theo lịch hoạt động của siêu thị</span>',status:'dip',change:'giu'});
 
   sec(['khac','Khác']);
@@ -332,7 +332,7 @@ function fields(s){
     const cur = s.repair.cur, fl = [];
     if (cur.some(x => /Không có/.test(x))) fl.push(['Đang khai "Không có"','b-red']);
     else if (!cur.length) fl.push(['Chưa khai','b-amber']);
-    add({label:'Dịch vụ sửa chữa',note:'repair',cur:ln(cur.map(esc)),flags:fl,neu:ln(['Có dịch vụ sửa chữa']),status:'chot',
+    add({label:'Dịch vụ › Dịch vụ sửa chữa',note:'repair',cur:ln(cur.map(esc)),flags:fl,neu:ln(['Có dịch vụ sửa chữa']),status:'chot',
       change:cur.includes('Có dịch vụ sửa chữa')?'giu':'sua'});
   }
   {
@@ -345,15 +345,15 @@ function fields(s){
   {
     const cur = s.opt.cur, miss = STD.opt.filter(p => !cur.includes(p)), fl = [];
     if (miss.length) fl.push([`Thiếu ${miss.join(', ')}`,'b-amber']);
-    add({label:'Tuỳ chọn dịch vụ',note:'opt',cur:ln(cur.map(esc)),flags:fl,neu:ln(STD.opt.map(esc)),status:'cho',change:miss.length?'them':'giu'});
+    add({label:'Các tùy chọn dịch vụ',note:'opt',cur:ln(cur.map(esc)),flags:fl,neu:ln(STD.opt.map(esc)),status:'cho',change:miss.length?'them':'giu'});
   }
   add({label:'Thuộc tính khác',note:'other',cur:s.other.length?ln(s.other.map(esc)):'<span class="empty">Không có</span>',flags:[],
     neu:s.other.length?ln(s.other.map(esc)):'<span class="empty">Không có</span>',status:'giu',change:'giu'});
 
-  sec(['dich-vu','Dịch vụ']);
+  sec(['dich-vu','Danh sách dịch vụ (màn Chỉnh sửa dịch vụ, ngoài Thông tin doanh nghiệp)']);
   {
     const svcHtml = STD.services.map(([n,d,st]) => `<div class="svc"><b>${esc(n)} ${st==='de-xuat'?badge('Đề xuất thêm','b-violet'):''}</b><span>${esc(d)}</span></div>`).join('');
-    add({label:'Dịch vụ',note:'svc',cur:'<span class="empty">Chưa có dịch vụ nào</span>',flags:[['Chưa khai dịch vụ','b-red']],
+    add({label:'Danh sách dịch vụ',note:'svc',cur:'<span class="empty">Chưa có dịch vụ nào</span>',flags:[['Chưa khai dịch vụ','b-red']],
       neu:svcHtml,status:'chot',change:'them'});
   }
 
