@@ -209,14 +209,14 @@ const NOTES = {
   special:{t:'Giờ đặc biệt',p:'Chưa siêu thị nào khai.',w:'Không có giá trị cố định. Trước mỗi dịp lễ, Tết lấy lịch hoạt động rồi khai hàng loạt. Không khai thì Google có thể báo sai giờ, khách tới lúc siêu thị đóng cửa.'},
   extra:{t:'Thêm giờ mở cửa khác',p:'Chưa siêu thị nào khai.',w:'Không khai. Các loại giờ ở đây (bữa sáng, nhà bếp, đồ ăn mang đi…) dành cho nhà hàng, quán ăn. "Tự đến lấy" hay "Giờ phục vụ trực tuyến" của siêu thị trùng giờ mở cửa nên không cần khai riêng.'},
   from:{t:'Từ doanh nghiệp',w:'Để nguyên. Mục này chỉ có 1 lựa chọn "Tự nhận là do phụ nữ sở hữu", không áp dụng cho chuỗi bán lẻ.'},
-  park:{t:'Bãi đỗ xe',p:'Chỉ 1/454 siêu thị có khai bãi đỗ xe.',w:'Mục "Tiện ích tại siêu thị" trên website ghi "giữ xe miễn phí" ở mọi siêu thị kiểm thử. Khai "Bãi đỗ xe miễn phí" để Google trả lời đúng khi khách hỏi "có chỗ gửi xe không".',x:'Đề xuất, chưa chốt. Siêu thị nằm trong trung tâm thương mại (gửi xe có phí của toà nhà) thì không khai.'},
+  park:{t:'Bãi đỗ xe',p:'Chỉ 1/454 siêu thị có khai bãi đỗ xe.',w:'Mục "Tiện ích tại siêu thị" trên website ghi "giữ xe miễn phí" ở mọi siêu thị kiểm thử. Khai "Bãi đỗ xe miễn phí" để Google trả lời đúng khi khách hỏi "có chỗ gửi xe không".',x:'Owner chốt 19/10. Siêu thị nằm trong trung tâm thương mại (gửi xe có phí của toà nhà) thì không khai.'},
   opt:{t:'Các tùy chọn dịch vụ',p:'249/454 siêu thị thiếu "Có phục vụ mua sắm tại cửa hàng", 124 siêu thị thiếu "Nhận tại cửa hàng cho các đơn đặt hàng trực tuyến". 251 siêu thị có mục này do Google tự sửa, chưa ai duyệt.',w:'Google dùng mục này để lọc khi khách hỏi "mua trực tiếp ở đâu", "đặt online rồi nhận tại cửa hàng".',x:'Chờ ngành hàng duyệt.'},
   repair:{t:'Dịch vụ',p:'121/454 siêu thị đang khai "Không có dịch vụ sửa chữa", 330 siêu thị chưa khai, chỉ 3 siêu thị khai "Có".',w:'Khai "Có dịch vụ sửa chữa" vì siêu thị có dán kính, chuyển dữ liệu, nhận bảo hành. Mục này quyết định siêu thị có hiện khi khách hỏi "sửa điện thoại ở đâu" hay không.',x:'Chỗ khai: Thông tin doanh nghiệp › tab Khác › mục "Dịch vụ". Mục trống thì bấm biểu tượng bút chì mới hiện ô "Dịch vụ sửa chữa". Khác với danh sách Dịch vụ ở màn Chỉnh sửa dịch vụ (phần cuối trang).'},
   cust:{t:'Khách hàng',w:'Để nguyên. Mục này gồm "Chào đón người thuộc giới LGBTQ+", "Nơi an toàn cho người chuyển giới" — không liên quan việc khách tìm mua hàng.'},
-  plan:{t:'Lên kế hoạch',p:'1 siêu thị bị khai "Yêu cầu hẹn trước", khiến Google hiểu khách phải đặt lịch mới được tới.',w:'Siêu thị mở cửa tự do, không cần hẹn. Siêu thị nào đang có "Yêu cầu hẹn trước" thì bỏ chọn; còn lại để trống.'},
+  plan:{t:'Lên kế hoạch',p:'1 siêu thị (1133) bị khai "Yêu cầu hẹn trước", khiến Google hiểu khách phải đặt lịch mới được tới.',w:'Siêu thị mở cửa tự do, không cần hẹn. Siêu thị nào đang có "Yêu cầu hẹn trước" thì bỏ chọn; còn lại để trống.',x:'Owner chốt 19/10.'},
   access:{t:'Phù hợp cho người khuyết tật',p:'165 siêu thị có giá trị do Google tự thêm theo góp ý của người dùng Maps, phần lớn là "Không có lối vào cho xe lăn".',w:'Không áp mẫu chung vì tùy mặt bằng từng siêu thị. Giữ nguyên; siêu thị nào có lối đi xe lăn thật thì khai "Có", nếu Google ghi sai thì sửa theo thực tế.'},
   pay:{t:'Thanh toán',p:'Google đã tự sửa mục này ở 398/454 siêu thị. Nhiều siêu thị bị gỡ loại thẻ: chỉ còn 51 siêu thị ghi Visa, 133 ghi Mastercard, 49 ghi JCB.',w:'Google và AI dùng mục này để trả lời "có quẹt thẻ, có trả bằng điện thoại không".',x:'Chờ bộ phận thanh toán xác nhận loại thẻ nhận ở mọi siêu thị.'},
-  amen:{t:'Tiện nghi',p:'234/454 siêu thị chưa khai Wi-Fi.',w:'Website ghi "wifi miễn phí" trong tiện ích tại mọi siêu thị kiểm thử. Khai "Wi-Fi miễn phí" để hồ sơ khớp website.',x:'Đề xuất, chưa chốt. "Nhà vệ sinh cho cả hai giới" không khai.'},
+  amen:{t:'Tiện nghi',p:'234/454 siêu thị chưa khai Wi-Fi.',w:'Website ghi "wifi miễn phí" trong tiện ích tại mọi siêu thị kiểm thử. Khai "Wi-Fi miễn phí" để hồ sơ khớp website.',x:'Owner chốt 19/10. "Nhà vệ sinh cho cả hai giới" không khai.'},
   kids:{t:'Trẻ em',w:'Để nguyên. Mục này gồm bàn thay tã, phòng cho con bú — siêu thị điện thoại không có.'},
   recyc:{t:'Tái chế',p:'Google tự ghi "Không tái chế đồ điện tử" ở 84 siêu thị, "Không tái chế pin" ở 47 siêu thị.',w:'Giữ nguyên. Thu cũ đổi mới là mua lại máy, không phải tái chế. Chỉ khai "Có" khi siêu thị có chương trình nhận pin, đồ điện tử cũ để tái chế thật.'},
   svc:{t:'Danh sách dịch vụ',p:'0/454 siêu thị khai dịch vụ. Đây là chỗ quan trọng nhất cho câu hỏi hẹp như "dán kính ở đâu", "chuyển dữ liệu điện thoại", "mua trả góp". Không khai thì Google và AI không có căn cứ để gợi ý Thế Giới Di Động.',w:'7 dịch vụ đã chốt là việc mọi siêu thị đều làm (không có thay pin nên không khai). 4 dịch vụ đề xuất thêm lấy từ mục "Tiện ích tại siêu thị" trên website — 25/25 siêu thị kiểm thử đều ghi giống nhau — đang chờ duyệt.',x:'Khai ở màn riêng "Chỉnh sửa dịch vụ" của hồ sơ, không nằm trong Thông tin doanh nghiệp. Phải làm trên giao diện hoặc qua API, file tải lên hàng loạt không ghi được mục này.'},
@@ -370,14 +370,14 @@ function fields(s){
   };
   const keep = cur => cur;
   attr('Từ doanh nghiệp','from',keep,'kad');
-  attr('Bãi đỗ xe','park',cur => cur.includes('Bãi đỗ xe miễn phí') ? cur : [...cur,'Bãi đỗ xe miễn phí'],'dx');
+  attr('Bãi đỗ xe','park',cur => cur.includes('Bãi đỗ xe miễn phí') ? cur : [...cur,'Bãi đỗ xe miễn phí'],'chot');
   attr('Các tùy chọn dịch vụ','opt',() => STD.opt,'cho',(cur,neu) => {
     const m = neu.filter(x => !cur.includes(x)); return m.length ? [[`Thiếu ${m.length} lựa chọn`,'b-amber']] : [];
   });
   attr('Dịch vụ','repair',() => ['Có dịch vụ sửa chữa'],'chot',cur =>
     cur.includes('Không có dịch vụ sửa chữa') ? [['Đang khai "Không có dịch vụ sửa chữa"','b-red']] : (cur.length ? [] : [['Chưa khai','b-amber']]));
   attr('Khách hàng','cust',keep,'kad');
-  attr('Lên kế hoạch','plan',cur => cur.filter(x => x!=='Yêu cầu hẹn trước'),cur => cur.includes('Yêu cầu hẹn trước') ? 'dx' : 'kad',cur =>
+  attr('Lên kế hoạch','plan',cur => cur.filter(x => x!=='Yêu cầu hẹn trước'),cur => cur.includes('Yêu cầu hẹn trước') ? 'chot' : 'kad',cur =>
     cur.includes('Yêu cầu hẹn trước') ? [['Khai sai "Yêu cầu hẹn trước"','b-red']] : []);
   attr('Phù hợp cho người khuyết tật','access',keep,'ca');
   attr('Thanh toán','pay',() => STD.pay,'cho',(cur,neu) => {
@@ -386,7 +386,7 @@ function fields(s){
     if (m.length) fl.push([`Thiếu ${m.length} lựa chọn`,'b-amber']);
     return fl;
   });
-  attr('Tiện nghi','amen',cur => cur.includes('Wi-Fi miễn phí') ? cur : [...cur.filter(x => !/Wi-Fi/.test(x)),'Wi-Fi miễn phí'],'dx');
+  attr('Tiện nghi','amen',cur => cur.includes('Wi-Fi miễn phí') ? cur : [...cur.filter(x => !/Wi-Fi/.test(x)),'Wi-Fi miễn phí'],'chot');
   attr('Trẻ em','kids',keep,'kad');
   attr('Tái chế','recyc',keep,'giu');
 
